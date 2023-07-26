@@ -1,0 +1,276 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8C11BE;
+    width: 375px;
+    height: 667px;
+}
+.tudo{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.titulo {
+    width: 147px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tituloSpan {
+    font-family: Saira Stencil One;
+font-size: 32px;
+font-weight: 400;
+line-height: 50px;
+color: #FFFFFF;
+}
+.formulario {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input {
+    width: 326px;
+    height: 58px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+input::placeholder{
+    font-family: Raleway;
+font-size: 20px;
+font-weight: 400;
+line-height: 23px;
+letter-spacing: 0em;
+text-align: left;
+color: #000000;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    width: 326px;
+height: 46px;
+border-radius: 5px;
+background-color: #A328D6;
+
+}
+.textoButton{
+    font-family: Raleway;
+font-size: 20px;
+font-weight: 700;
+line-height: 23px;
+letter-spacing: 0em;
+text-align: left;
+color: #FFFFFF;
+
+}
+.linkCadastro {
+    font-family: Raleway;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #000; /* Substitua #000 pela cor desejada para os links */
+    text-decoration: none; /* Remova sublinhado se não for necessário */
+    color: #FFFFFF;
+}
+.linkCadastro:hover {
+  color: gray;
+}
+.topoMenu {
+    margin-top: 0;
+    width: 100%;
+    height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.textBemVindo {
+    font-family: Raleway;
+font-size: 26px;
+font-weight: 700;
+line-height: 31px;
+letter-spacing: 0em;
+text-align: left;
+color: #FFFFFF;
+}
+.registros{
+    width: 326px;
+    height: 446px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    margin: auto;
+    position: relative;
+
+}
+.containerMenu {
+    background-color: #8C11BE;
+    width: 375px;
+    height: 667px;
+}
+.footerMenu {
+    width: 100%;
+    height: 142px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.adicionar {
+    width: 155px;
+height: 114px;
+border-radius: 5px;
+background-color: #A328D6;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+}
+.adicionarImagem {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+.textSaida {
+    font-family: Raleway;
+font-size: 17px;
+font-weight: 700;
+line-height: 20px;
+letter-spacing: 0em;
+text-align: left;
+color: #FFFFFF;
+margin-left: 10px;
+}
+.adicionarInput{
+    width: 80%;
+height: 58px;
+border-radius: 5px;
+}
+.adicionarInput::placeholder{
+    font-family: Raleway;
+font-size: 20px;
+font-weight: 400;
+line-height: 23px;
+letter-spacing: 0em;
+text-align: left;
+color: #000;
+}
+.botaoSalvar{
+    width: 80%;
+height: 46px;
+border-radius: 5px;
+background-color: #A328D6;
+font-family: Raleway;
+font-size: 20px;
+font-weight: 700;
+line-height: 23px;
+letter-spacing: 0em;
+text-align: center;
+color: #FFFFFF;
+
+}
+.linhaRegistros{
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+.data{
+    font-family: Raleway;
+font-size: 16px;
+font-weight: 400;
+line-height: 19px;
+text-align: left;
+color: #c6c6c6;
+margin-left: 5px;
+}
+.esquerda {
+    display: flex;
+}
+.description{
+    font-family: Raleway;
+font-size: 16px;
+font-weight: 400;
+line-height: 19px;
+text-align: left;
+color: #000;
+margin-left: 5px;
+}
+.direita{
+
+display: flex;
+align-items: top;
+
+
+}
+.direitas{
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+}
+.saldoTotal{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+}
+.textSaldo {
+    font-family: Raleway;
+font-size: 17px;
+font-weight: 700;
+line-height: 20px;
+text-align: left;
+margin-left: 5px;
+}
+.valorSaldo{
+    font-family: Raleway;
+font-size: 17px;
+font-weight: 400;
+line-height: 20px;
+text-align: right;
+
+}
+.textNoRegister{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: Raleway;
+font-size: 20px;
+font-weight: 400;
+line-height: 23px;
+letter-spacing: 0em;
+text-align: center;
+color: #868686;
+}
+.voltar{
+    width: 50px;
+}
+.delete{
+    font-family: Raleway;
+font-size: 16px;
+font-weight: 400;
+line-height: 19px;
+letter-spacing: 0em;
+text-align: right;
+color: #C6C6C6;
+margin-left: 10px;
+text-decoration: none
+}
