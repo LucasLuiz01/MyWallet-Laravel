@@ -26,11 +26,13 @@ class MenuController extends Controller
         }
     }
 
-    public function getEntrada(){
-        return view('entrada');
+    public function getEntrada($id){
+       $walletData = Wallet::where('id', $id)->get();
+        return view('entrada', ['walletData' => $walletData]);
     }
-    public function getSaida(){
-        return view('saida');
+    public function getSaida($id){
+        $walletData = Wallet::where('id', $id)->get();
+        return view('saida', ['walletData' => $walletData]);
     }
     public function logout(){
         Auth::logout();
@@ -53,6 +55,19 @@ class MenuController extends Controller
     public function delete($id) {
         $user = Auth::user();
         Wallet::findOrFail($id)->delete();
+        $walletData = Wallet::where('user_id', $user->id)->get();
+        $saldo = 0;
+        foreach($walletData as $data){
+            $saldo += $data->entrada ? $data->valor : -$data->valor;
+        }
+        return redirect()->route('app.menu',['walletData' => $walletData, 'saldo' =>$saldo]);
+    }
+    public function edit(Request $request, $id) {
+        $user = Auth::user();
+        $wallet = Wallet::where('id', $id)->first();
+        $wallet->description =$request->input('description');
+        $wallet->valor =$request->input('value');
+        $wallet->save();
         $walletData = Wallet::where('user_id', $user->id)->get();
         $saldo = 0;
         foreach($walletData as $data){

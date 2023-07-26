@@ -29,7 +29,7 @@
                 <div class="linhaRegistros">
                     <div class="esquerda">
                         <span class="data">{{$data->data}}</span>
-                        <span class="description">{{$data->description}}</span>
+                        <a href="{{$data->entrada ? route('app.entrada', ['id' => $data->id]) : route('app.saida',['id' => $data->id])}}" class="description">{{$data->description}}</a>
                     </div>
                     <div class="direita">
                         <span class="direitas" style="color: {{$data->entrada ? '#03AC00' : '#C70000'}}">
@@ -59,11 +59,11 @@
             </div>
                 <div class="footerMenu">
                     <div class="adicionar">
-                        <a href="{{route('app.entrada')}}"><img class="adicionarImagem" src="/images/mais.png" alt="mais"></a>
+                        <a href="{{route('app.entrada' , ['id' => 0])}}"><img class="adicionarImagem" src="/images/mais.png" alt="mais"></a>
                         <span class="textSaida">Nova Entrada</span>
                     </div>
                     <div class="adicionar">
-                        <a href="{{route('app.saida')}}"><img class="adicionarImagem" src="/images/menos.png" alt="mais"></a>
+                        <a href="{{route('app.saida', ['id' => 0])}}"><img class="adicionarImagem" src="/images/menos.png" alt="mais"></a>
                         <span class="textSaida"> Nova Saída</span>
                     </div>
                 </div>
