@@ -13,7 +13,7 @@
     <div class="tudo">
         <div class="containerMenu">
             <div class="topoMenu">
-                <span class="textBemVindo">Olá, Bem Vindo</span>
+                <span class="textBemVindo">Olá, {{$user->name}}</span>
             <form id="logout-form" action="{{route('app.logout')}}" method="POST">
             @csrf
             </form>

@@ -8,6 +8,10 @@
     <div class="formulario">
         <form action="{{route('app.cadastro')}}" method="POST">
             @csrf
+            <input type="string" placeholder="Nome" name="name">
+            @if($errors->has('name'))
+            <div class="error-message">{{ $errors->first('name') }}</div>
+        @endif
             <input type="email" placeholder="Email" name="email">
             @if($errors->has('email'))
             <div class="error-message">{{ $errors->first('email') }}</div>

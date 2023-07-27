@@ -20,7 +20,7 @@ class MenuController extends Controller
             foreach($walletData as $data){
                 $saldo += $data->entrada ? $data->valor : -$data->valor;
             }
-            return view('menu', ['walletData' => $walletData, 'saldo' =>$saldo]);
+            return view('menu', ['walletData' => $walletData, 'saldo' =>$saldo, 'user' => $user]);
         }else{
             return redirect()->route('app.login');
         }
@@ -60,7 +60,7 @@ class MenuController extends Controller
         foreach($walletData as $data){
             $saldo += $data->entrada ? $data->valor : -$data->valor;
         }
-        return redirect()->route('app.menu',['walletData' => $walletData, 'saldo' =>$saldo]);
+        return redirect()->route('app.menu',['walletData' => $walletData, 'saldo' =>$saldo, 'user' => $user]);
     }
     public function edit(Request $request, $id) {
         $user = Auth::user();
@@ -73,6 +73,6 @@ class MenuController extends Controller
         foreach($walletData as $data){
             $saldo += $data->entrada ? $data->valor : -$data->valor;
         }
-        return redirect()->route('app.menu',['walletData' => $walletData, 'saldo' =>$saldo]);
+        return redirect()->route('app.menu',['walletData' => $walletData, 'saldo' =>$saldo, 'user' => $user]);
     }
 }

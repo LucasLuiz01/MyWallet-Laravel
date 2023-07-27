@@ -11,6 +11,7 @@ class AuthController extends Controller
 {
     public function cadastro(Request $request){
         $regras =[
+            'name' => 'required|min:5',
             'email' => 'required|email|min:3|unique:users',
             'password' =>  'required|min:3',
             'confirmPassword' => 'required|same:password'
@@ -18,6 +19,8 @@ class AuthController extends Controller
 
         $feedback = [
             'email.required' => 'O campo email é obrigatório.',
+            'name.required' => 'O campo nome é obrigatório.',
+            'name.min' => 'O nome deve ter pelo menos 5 caracteres.',
             'email.email' => 'Digite um email válido.',
             'email.unique' => 'Este email já está em uso.',
             'password.required' => 'O campo senha é obrigatório.',
@@ -28,6 +31,7 @@ class AuthController extends Controller
         $request->validate($regras, $feedback);
         $user = new User();
         $user->email = $request->input('email');
+        $user->name = $request->input('name');
         $hashPassword = Hash::make($request->input('password'));
         $user->password = $hashPassword;
         $user->save();
