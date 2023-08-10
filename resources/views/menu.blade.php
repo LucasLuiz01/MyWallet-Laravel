@@ -21,7 +21,7 @@
             <img src="/images/Vector.png" alt="Saida">   
             </a>
                
-             
+            
             </div>
             <div class="registros">
                 @if($walletData->count() > 0)
