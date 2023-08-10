@@ -17,7 +17,7 @@ class CreateWallet extends Migration
             $table->id();
             $table->timestamps();
             $table->string('description',50);
-            $table->decimal('valor',4,2);
+            $table->integer('valor');
             $table->date('data');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
